@@ -1,6 +1,14 @@
-function ProductRow (){
+function ProductRow ({ product }){
+    const name = product.stocked ? product.name :
+    <span style={{ color: 'red' }}>
+      {product.name}
+    </span>;
+
     return (
-        <div><h1>Product Row Test</h1></div>
+        <tr>
+            <td>{name}</td>
+            <td>{product.price}</td>
+        </tr>
     );
 }
 

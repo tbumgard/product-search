@@ -1,7 +1,11 @@
-function ProductCategoryRow (){
+function ProductCategoryRow ({ category }){
     return (
-        <div><h1>Product Category Row Test</h1></div>
-    );
+        <tr>
+          <th colSpan="2">
+            {category}
+          </th>
+        </tr>
+      );
 }
 
 export default ProductCategoryRow;
